@@ -8,8 +8,20 @@ import java.util.Scanner;
 public class Hello {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int numOne = Integer.parseInt(input.nextLine());
-        System.out.println(sumaCienMas(numOne));
+        String texto = input.nextLine();
+        System.out.println(esPalindromo(texto));
+    }
+
+    public static boolean esPalindromo(String cadena){
+        boolean palindromo = false;
+        StringBuilder reversa = new StringBuilder();
+        reversa.append(cadena);
+        String compare = reversa.reverse().toString();
+
+        if (cadena.equals(compare))
+            palindromo = true;
+
+        return palindromo;
     }
 
     public static int sumaCienMas(int numero){
