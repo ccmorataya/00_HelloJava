@@ -7,13 +7,18 @@ import java.util.Scanner;
  */
 public class Hello {
     public static void main(String[] args) {
-        Scanner input;
-        input = new Scanner(System.in);
-        int numOne, numTwo, numThree;
-        numOne = Integer.parseInt(input.nextLine());
-        numTwo = Integer.parseInt(input.nextLine());
-        numThree = Integer.parseInt(input.nextLine());
-        System.out.println(mayorTres(numOne, numTwo, numThree));
+        Scanner input = new Scanner(System.in);
+        int numOne = Integer.parseInt(input.nextLine());
+        System.out.println(sumaCienMas(numOne));
+    }
+
+    public static int sumaCienMas(int numero){
+        int suma = 0;
+
+        for (int i = numero; i<(numero+100); i++){
+            suma+= i;
+        }
+        return suma;
     }
 
     public static int mayorTres(int numOne, int numTwo, int numThree){
