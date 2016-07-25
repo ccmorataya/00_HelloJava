@@ -9,10 +9,13 @@ public class Hello {
     public static void main(String[] args) {
         Scanner input;
         input = new Scanner(System.in);
-        String numOne, numTwo, numThree;
-        numOne = input.nextLine();
-        numTwo = input.nextLine();
-        numThree = input.nextLine();
-        System.out.println(numOne + numTwo + numThree);
+        int numOne, numTwo, numThree;
+        numOne = Integer.parseInt(input.nextLine());
+        numTwo = Integer.parseInt(input.nextLine());
+        numThree = Integer.parseInt(input.nextLine());
+        System.out.println(sumaTres(numOne, numTwo, numThree));
+    }
+    public static int sumaTres(int numOne, int numTwo, int numThree){
+        return numOne+numTwo+numThree;
     }
 }
